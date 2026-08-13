@@ -1,6 +1,6 @@
 '''
 k = 1 Hodge Laplace problem in annular domain
-Primal formulation, see Eq. (4.31) and (5.2). 
+Mixed formulation, see Eq. (4.32)
 '''
 from firedrake import *
 
