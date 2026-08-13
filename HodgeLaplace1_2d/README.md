@@ -1,5 +1,17 @@
 # k=1 Hodge Laplace problem in 2d
 
+Solve in simply connected domain
+
+```math
+\textrm{curl}(\textrm{curl}(u)) - \textrm{grad}(\textrm{div}(u)) = f
+```
+
+with boundary condition
+
+```math
+u \cdot n = 0, \qquad (\textrm{curl } u) \times n = 0
+```
+
 Make the mesh
 
 ```shell
