@@ -37,10 +37,10 @@ W = S * V * R
 sigma,u,r = TrialFunctions(W)
 tau,v,s   = TestFunctions(W)
 
-x = SpatialCoordinate(mesh)
+x, y = SpatialCoordinate(mesh)
 
 # All bc are natural
-f = as_vector([0.0,x[0]])
+f = as_vector([0.0,x])
 a = sigma*tau*dx - dot(u,grad(tau))*dx \
     + dot(grad(sigma),v)*dx + curl(u)*curl(v)*dx \
     + r*dot(q,v)*dx + s*dot(u,q)*dx
