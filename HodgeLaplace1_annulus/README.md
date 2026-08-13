@@ -1,5 +1,7 @@
 # k=1 Hodge Laplace on annular domain
 
+The space of Harmonic forms is non-trivial and is of dimension one. We first find a basis for this in the mixed formulation. The primal formulation will converge to wrong solution.
+
 Generate mesh
 
 ```shell
