@@ -4,7 +4,6 @@ Mixed formulation, see Eq. (4.32).
 p=0 so we do not need to solve for this.
 '''
 from firedrake import *
-import matplotlib.pyplot as plt
 
 filename = "gamma.msh"
 degree = 1
@@ -21,6 +20,7 @@ W = S * V
 sigma,u = TrialFunctions(W)
 tau,v = TestFunctions(W)
 
+# All bc are natural
 f = as_vector([1.0,0.0])
 a = sigma*tau*dx - dot(u,grad(tau))*dx \
     + dot(grad(sigma),v)*dx + curl(u)*curl(v)*dx
