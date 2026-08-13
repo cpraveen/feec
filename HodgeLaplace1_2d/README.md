@@ -30,4 +30,7 @@ visit -o sol.pvd
 
 and plot vectors of `u`.
 
+<img src="output/mixed.png" alt="Mixed"  width="45%"/>
+<img src="output/primal.png" alt="Primal"  width="45%"/>
+
 Compare with Fig. 5.1 of Arnold.
