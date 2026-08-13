@@ -1,6 +1,7 @@
 '''
 k = 1 Hodge Laplace problem in Gamma-shaped domain
 Primal formulation, see Eq. (4.31) and (5.2). 
+Boundary condition u.n = 0 is implemented weakly via penalty terms.
 '''
 from firedrake import *
 

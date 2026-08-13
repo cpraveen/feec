@@ -15,8 +15,11 @@ print(f"Degree: {degree}")
 #    curl(q) = 0, div(q) = 0 in Omega
 #    q.n = 0 on boundary
 # Set q = curl(psi) and solve for psi
-# q.n = 0 implies psi = const on boundary
-# Laplace(psi) = 0, psi=0 on inner boundary, psi=1 on outer boundary
+# q.n = 0 implies psi = const on each boundary
+# Problem for psi
+#    Laplace(psi) = 0, 
+#    psi=0 on inner boundary
+#    psi=1 on outer boundary
 P = FunctionSpace(mesh, "Lagrange", degree)
 p = TrialFunction(P)
 q = TestFunction(P)
@@ -37,9 +40,9 @@ W = S * V * R
 sigma,u,r = TrialFunctions(W)
 tau,v,s   = TestFunctions(W)
 
-x, y = SpatialCoordinate(mesh)
-
 # All bc are natural
+
+x, y = SpatialCoordinate(mesh)
 f = as_vector([0.0,x])
 a = sigma*tau*dx - dot(u,grad(tau))*dx \
     + dot(grad(sigma),v)*dx + curl(u)*curl(v)*dx \
